@@ -28,7 +28,7 @@
     <main>
         <h1>Primeiro, seu prato</h1>
         <div class="opcoes">
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="dishes">
                 <div class="item-opcao" data-identifier="opcao-comida" >
                     <img src="./imagens/prato principal/camarão jangadeiro.jpg" alt="camarão jangadeiro">
                     <h1 data-identifier="Nome-Comida">Camarão Jangadeiro</h1>
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="dishes">
                 <div class="item-opcao" data-identifier="opcao-comida" >
                     <img src="./imagens/prato principal/Poke de Salmão.jpg" alt="Poke">
                     <h1 data-identifier="Nome-Comida">Poke</h1>
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="dishes">
                 <div class="item-opcao" data-identifier="opcao-comida" >
                     <img src="./imagens/prato principal/macarrão a carbonara.jpg" alt="macarrão a carbonara">
                     <h1 data-identifier="Nome-Comida">macarrão a carbonara</h1>
@@ -62,7 +62,7 @@
 
         <h1>Agora, sua bebida</h1>
         <div class="opcoes"> 
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="drinks">
                 <div class="item-opcao" data-identifier="opcao-bebida" >
                     <img src="./imagens/bebidas/Sulfitos-Vinho.jpg" alt="Vinho">
                     <h1 data-identifier="Nome-Bebida">Vinho</h1>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="drinks">
                 <div class="item-opcao" data-identifier="opcao-bebida" >
                     <img src="./imagens/bebidas/Chopp-e-seus-beneficios-para-a-saude.jpg" alt="Chopp">
                     <h1 data-identifier="Nome-Bebida">Chopp</h1>
@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="drinks">
                 <div class="item-opcao" data-identifier="opcao-bebida" >
                     <img src="./imagens/bebidas/jarra.jpg" alt="Jarra com suco de laranja">
                     <h1 data-identifier="Nome-Bebida">Suco de laranja</h1>
@@ -95,7 +95,7 @@
         </div>
         <h1>Por fim, sua sobremesa</h1>
         <div class="opcoes">
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="desserts">
                 <div class="item-opcao" data-identifier="opcao-sobremesa" >
                     <img src="./imagens/sobremesa/receitas-de-cheesecake-de-morango.jpg" alt="cheesecake">
                     <h1 data-identifier="Nome-Sobremesa">Cheesecake de morango</h1>
@@ -105,7 +105,7 @@
                 </div>
             </div>
 
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="desserts">
                 <div class="item-opcao" data-identifier="opcao-sobremesa" >
                     <img src="./imagens/sobremesa/Pudim.jpg" alt="Pudim">
                     <h1 data-identifier="Nome-Sobremesa">Pudim</h1>
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="item" data-identifier="dishes">
+            <div class="item item-clicavel" data-identifier="desserts">
                 <div class="item-opcao" data-identifier="opcao-sobremesa" >
                     <img src="./imagens/sobremesa/petit-gateau.jpg" alt="Petit gateau">
                     <h1 data-identifier="Nome-Sobremesa">Petit gateau</h1>
@@ -128,11 +128,40 @@
     </main>
 
     <footer>
-        <div class="selecionar">
-            <h1>Selecione os 3 itens para fechar o pedido</h1>
-        </div>      
+        <button onclick="abrirTelaConfirmacao()" id="finalizar-pedido">
+            <div class="selecionar">
+                <h1>Selecione os 3 itens para fechar o pedido</h1>
+            </div>
+        </button>
+          
     </footer>
 
+    <div id="background-confirmacao">
+        <div id="tela-confirmacao" data-identifier="confirmation-dialog">
+            <h2>Confirme seu pedido</h2>
+            <div class="informacao-pedido">
+                <h3>placeholder</h3>
+                <h3>placeholder</h3>
+            </div>
+            <div class="informacao-pedido">
+                <h3>placeholder</h3>
+                <h3>placeholder</h3>
+            </div>
+            <div class="informacao-pedido">
+                <h3>placeholder</h3>
+                <h3>placeholder</h3>
+            </div>
+            <div class="informacao-pedido">
+                <h3>TOTAL</h3>
+                <h3 id="preco-final">$$$</h3>
+            </div>
+            <button id="botao-confirmar" class="item-clicavel">Tudo certo, pode pedir!</button>
+            <button onclick="cancelarPedido()" class="item-clicavel">Cancelar</button>
+        </div>
+    </div>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="src/functions.js"></script>
 </body>
 </html>
